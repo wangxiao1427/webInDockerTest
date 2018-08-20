@@ -5,9 +5,7 @@
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
-    "egg-scripts": "^2.5.0"
-  },
-  "devDependencies": {
+    "egg-scripts": "^2.5.0",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
     "egg-bin": "^4.3.5",
@@ -16,6 +14,9 @@
     "eslint": "^4.11.0",
     "eslint-config-egg": "^6.0.0",
     "webstorm-disable-index": "^1.2.0"
+  },
+  "devDependencies": {
+    
   },
   "engines": {
     "node": ">=8.9.0"
