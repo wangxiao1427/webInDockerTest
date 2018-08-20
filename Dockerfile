@@ -1,0 +1,14 @@
+FROM mhart/alpine-node:8.9.3
+LABEL Name=mytest
+COPY package.json /tmp/package.json
+RUN cd /tmp \
+    && npm install egg-scripts -g  \
+    && npm install \
+    && npm install -g typescript 
+
+RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+EXPOSE 7002
+#CMD egg-scripts start --port 80 --daemon --title=APP_API
+CMD npm run dev
