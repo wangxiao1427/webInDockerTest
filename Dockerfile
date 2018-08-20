@@ -8,4 +8,4 @@ RUN cd /tmp \
     && npm install -g typescript 
 EXPOSE 7001
 #CMD egg-scripts start --port 80 --daemon --title=APP_API
-CMD npm run dev
+CMD node app.js
