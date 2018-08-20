@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8.9.3
+FROM mc2labs/nodejs
 LABEL Name=mytest
 COPY package.json /tmp/package.json
 RUN cd /tmp \
@@ -9,6 +9,6 @@ RUN cd /tmp \
 RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-EXPOSE 7002
+EXPOSE 7001
 #CMD egg-scripts start --port 80 --daemon --title=APP_API
 CMD npm run dev
