@@ -8,4 +8,4 @@ LABEL Name=mytest
 #     && npm install -g typescript 
 EXPOSE 7001
 #CMD egg-scripts start --port 80 --daemon --title=APP_API
-CMD node app.js
+CMD npm run dev
