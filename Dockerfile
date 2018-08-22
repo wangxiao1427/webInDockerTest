@@ -1,6 +1,6 @@
 FROM mhart/alpine-node:8.9.3
 LABEL Name=mytest
-  RUN cd npm config set registry=https://registry.npm.taobao.org/ \
+  RUN npm config set registry=https://registry.npm.taobao.org/ \
       && npm install egg-scripts -g  \
       && npm install \
       && npm install -g typescript 
